@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .app-wrapper {
   display: flex;
   height: 100vh;
@@ -11,7 +16,11 @@
   flex-direction: column;
 }
 
-.header_text {
+.header__text {
+  margin-top: 64px;
+  margin-left: 188px;
+  margin-right: 189px;
+  margin-bottom: 32px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -19,14 +28,14 @@
   line-height: 28px;
   display: flex;
   justify-content: center;
+  border: 1px solid;
 
   color: #000000;
 }
-.header_button {
+.header__button {
   display: flex;
   justify-content: center;
 }
-
 button {
   padding: 13px 55px;
 }
@@ -38,31 +47,44 @@ button {
   justify-content: center;
 }
 
-.footer_text {
+.footer__text {
+  /* justify-content: center; */
   display: flex;
-  justify-content: center;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 28px;
-  align-items: center;
-  text-align: center;
+  justify-content: center;
+
+  /* align-items: flex-start;
+  text-align: center; */
 }
 
-.footer_inputs {
+.footer__input-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.footer_input1 {
+.footer__left-input {
 }
 
 .footer_input2 {
 }
 
-.footer_button {
+.footer__button {
   display: flex;
   justify-content: center;
+}
+
+.line {
+  position: absolute;
+  height: 0px;
+  left: 0px;
+  right: 0px;
+  top: 379px;
+
+  border: 1px solid #000000;
+  transform: rotate(0.07deg);
 }
