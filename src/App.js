@@ -1,15 +1,23 @@
-import './App.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Line from './components/Line'
+import FirstPageComponent from './components/pages/FirstPageComponent'
+import SecondPageComponent from './components/pages/SecondPageComponent'
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="app-wrapper">
-      <Header />
-      <Line />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Route path="/" exact component={FirstPageComponent} />
+        <Route path="/request" exact component={SecondPageComponent} />
+      </div>
+    </Router>
   )
 }
 
