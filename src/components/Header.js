@@ -1,3 +1,4 @@
+import HeaderButton from './HeaderButton'
 function Header() {
   return (
     <header className="header">
@@ -8,8 +9,7 @@ function Header() {
           12-13 Декабря 2020 года
         </h1>
       </div>
-
-      <button className="header__button">Подать заявку</button>
+      <HeaderButton />
     </header>
   )
 }
