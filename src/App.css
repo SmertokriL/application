@@ -3,7 +3,8 @@
   padding: 0;
 }
 
-.app-wrapper {
+.app-wrapper,
+.second-page {
   height: 100vh;
   margin: 0px auto;
   max-width: 965px;
@@ -54,4 +55,22 @@
 
 hr {
   border-top: 1px solid rgba(0, 0, 0, 0.9);
+}
+
+.second-page {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: default;
+}
+.second-page__title {
+  margin: 20px auto;
+}
+
+.second-page__radio {
+  margin: 10px auto;
+  display: flex;
+  width: 95vh;
+  flex-direction: row;
+  justify-content: space-around;
 }
