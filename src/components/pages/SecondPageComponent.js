@@ -1,7 +1,9 @@
+import { Formik } from 'formik'
+
 function SecondPageComponent() {
   return (
     <div>
-      <h2>SecondPage</h2>
+      <Formik></Formik>
     </div>
   )
 }
