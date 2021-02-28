@@ -63,6 +63,11 @@ hr {
   flex-flow: column;
   justify-content: default;
 }
+
+.second-page__mainForm {
+  display: flex;
+  flex-flow: column;
+}
 .second-page__title {
   margin: 20px auto;
 }
@@ -73,4 +78,38 @@ hr {
   width: 95vh;
   flex-direction: row;
   justify-content: space-around;
+}
+
+/* .second-page__nameForm {
+  /* display: flex;
+  flex-direction: column;
+} */
+
+*/ .input-dateOfBirth {
+  line-height: 1.5em;
+  border-radius: 4px;
+  border: solid 1px black;
+  padding: 4px 6px;
+
+  box-sizing: border-box;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.input {
+  line-height: 1.5em;
+  border-radius: 4px;
+  border: solid 1px black;
+  padding: 4px 6px;
+  display: block;
+  box-sizing: border-box;
+  margin: auto;
+  margin-top: 20px;
+  width: 80%;
+}
+
+.error {
+  color: red;
+  font-weight: 700;
+  font-size: 12px;
 }
