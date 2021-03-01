@@ -1,5 +1,5 @@
-import FirstPageComponent from './components/pages/FirstPageComponent'
-import SecondPageComponent from './components/pages/SecondPageComponent'
+import FirstPageComponent from './components/pages/FirstPageComponent/FirstPageComponent'
+import SecondPageComponent from './components/pages/SecondPageComponent/SecondPageComponent'
 import React from 'react'
 import {
   BrowserRouter as Router,

@@ -1,6 +1,6 @@
 import React from 'react'
-import HeaderButton from './HeaderButton'
-function Header() {
+import Button from './Button'
+function ContestResultsForm() {
   return (
     <header className="header">
       <div className="header__title">
@@ -10,9 +10,9 @@ function Header() {
           12-13 Декабря 2020 года
         </h1>
       </div>
-      <HeaderButton />
+      <Button />
     </header>
   )
 }
 
-export default Header
+export default ContestResultsForm

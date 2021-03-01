@@ -1,9 +1,9 @@
 import {Formik, Field} from 'formik'
-import './../../App.css'
+import '../../../App.css'
 import * as yup from 'yup'
 import React from 'react'
 
-import "./seconPageComponent.css"
+import "./SecondPageComponent.css"
 
 
 function SecondPageComponent() {

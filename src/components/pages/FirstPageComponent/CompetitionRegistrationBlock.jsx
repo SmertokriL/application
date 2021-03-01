@@ -1,5 +1,5 @@
 import React from 'react'
-function Footer() {
+function CompetitionRegistrationBlock() {
   return (
     <footer className="footer">
       <div className="footer__title">
@@ -19,4 +19,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default CompetitionRegistrationBlock

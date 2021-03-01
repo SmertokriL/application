@@ -7,7 +7,7 @@ import {
   useRouteMatch,
   useParams,
 } from 'react-router-dom'
-export default function HeaderButton() {
+export default function Button() {
   return (
     <Link to="/request">
       <button type="button" className="header__button">
