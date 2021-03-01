@@ -1,7 +1,9 @@
-import {Formik, Field, Form} from 'formik'
+import {Formik, Field} from 'formik'
 import './../../App.css'
 import * as yup from 'yup'
 import React from 'react'
+
+import "./seconPageComponent.css"
 
 
 function SecondPageComponent() {
@@ -25,9 +27,7 @@ function SecondPageComponent() {
 
     return (
         <div className="second-page">
-            <div className="second-page__title">
-                <h1>Подать заявку на участие</h1>
-            </div>
+            <h1 className="second-page__title">Подать заявку на участие</h1>
             <Formik
                 initialValues={{
                     picked: '',
@@ -62,9 +62,10 @@ function SecondPageComponent() {
                       handleSubmit,
                       dirty,
                   }) => (
+                    //Форма общая
                     <div className="second-page__mainForm">
                         <div className="second-page__radio">
-                            <div className="radio-first">
+                            <div className="radio-  first">
                                 <label>
                                     <Field type="radio" name="picked" value="Single"/>
 
@@ -78,9 +79,10 @@ function SecondPageComponent() {
                                 </label>
                             </div>
                         </div>
-                        {/* Форма ФИО */}
-                        <div className="second-page__nameForm">
-                            <p>
+
+                        <div className="second-page__inputs">
+                            {/* Форма ФИО */}
+                            <div className="second-page__nameForm">
                                 <input
                                     placeholder="ФИО исполнителя"
                                     className={`input`}
@@ -89,151 +91,181 @@ function SecondPageComponent() {
                                     onBlur={handleBlur}
                                     onChange={handleChange}
                                     value={values.name}
-                                ></input>
-                            </p>
+                                />
 
-                            {touched.name && errors.name && (
-                                <p className={'error'}>{errors.name}</p>
-                            )}
+                                {touched.name && errors.name && (
+                                    <p className={'error'}>{errors.name}</p>
+                                )}
+                            </div>
+
 
                             {/* Форма даты рождения */}
                             <div className="second-page__dateOfBirth">
-                                <p>
-                                    <input
-                                        placeholder="Дата рождения"
-                                        className={`input`}
-                                        type={`text`}
-                                        name={`dateOfBirth`}
-                                        onBlur={handleBlur}
-                                        onChange={handleChange}
-                                        value={values.dateOfBirth}
-                                    ></input>
-                                </p>
+
+                                <input
+                                    placeholder="Дата рождения"
+                                    className={`input`}
+                                    type={`text`}
+                                    name={`dateOfBirth`}
+                                    onBlur={handleBlur}
+                                    onChange={handleChange}
+                                    value={values.dateOfBirth}
+                                />
+
 
                                 {touched.dateOfBirth && errors.dateOfBirth && (
                                     <p className={'error'}>{errors.dateOfBirth}</p>
                                 )}
+                            </div>
+                            {/* Форма образовательного учреждения */}
+                            <div className="second-page__nameOfSchool">
 
-                                {/* Форма образовательного учреждения */}
-                                <div className="second-page__nameOfSchool">
-                                    <p>
-                                        <input
-                                            placeholder="Образовательное учреждение"
-                                            className={`input`}
-                                            type={`text`}
-                                            name={`nameOfSchool`}
-                                            onBlur={handleBlur}
-                                            onChange={handleChange}
-                                            value={values.nameOfSchool}
-                                        ></input>
-                                    </p>
+                                <input
+                                    placeholder="Образовательное учреждение"
+                                    className={`input`}
+                                    type={`text`}
+                                    name={`nameOfSchool`}
+                                    onBlur={handleBlur}
+                                    onChange={handleChange}
+                                    value={values.nameOfSchool}
+                                />
 
-                                    {touched.nameOfSchool && errors.nameOfSchool && (
-                                        <p className={'error'}>{errors.nameOfSchool}</p>
+
+                                {touched.nameOfSchool && errors.nameOfSchool && (
+                                    <p className={'error'}>{errors.nameOfSchool}</p>
+                                )}
+                            </div>
+                            <div className="row">
+                                {/* Город */}
+                                <div className="second-page__country">
+
+                                    <input
+                                        placeholder="Город"
+                                        className={`input`}
+                                        type={`text`}
+                                        name={`country`}
+                                        onBlur={handleBlur}
+                                        onChange={handleChange}
+                                        value={values.country}
+                                    />
+
+
+                                    {touched.country && errors.country && (
+                                        <p className={'error'}>{errors.country}</p>
                                     )}
-                                    {/* Город */}
-                                    <div className="second-page__country">
-                                        <p>
-                                            <input
-                                                placeholder="Город"
-                                                className={`input`}
-                                                type={`text`}
-                                                name={`country`}
-                                                onBlur={handleBlur}
-                                                onChange={handleChange}
-                                                value={values.country}
-                                            ></input>
-                                        </p>
+                                </div>
 
-                                        {touched.country && errors.country && (
-                                            <p className={'error'}>{errors.country}</p>
-                                        )}
-                                        {/* Телефон для связи */}
-                                        <div className="second-page__phone">
-                                            <p>
-                                                <input
-                                                    placeholder="Телефон для связи"
-                                                    className={`input`}
-                                                    type={`text`}
-                                                    name={`phone`}
-                                                    onBlur={handleBlur}
-                                                    onChange={handleChange}
-                                                    value={values.phone}
-                                                ></input>
-                                            </p>
 
-                                            {touched.phone && errors.phone && (
-                                                <p className={'error'}>{errors.phone}</p>
-                                            )}
-                                            {/*  Форма исполнения */}
-                                            <div className="second-page__formOfPerfomance">
-                                                <p>
-                                                    <input
-                                                        placeholder="Форма исполнения"
-                                                        className={`input`}
-                                                        type={`text`}
-                                                        name={`formOfPerfomance`}
-                                                        onBlur={handleBlur}
-                                                        onChange={handleChange}
-                                                        value={values.formOfPerfomance}
-                                                    ></input>
-                                                </p>
+                                {/* Телефон для связи */}
+                                <div className="second-page__phone">
 
-                                                {touched.formOfPerfomance &&
-                                                errors.formOfPerfomance && (
-                                                    <p className={'error'}>{errors.formOfPerfomance}</p>
-                                                )}
-                                                {/*  Преподаватель */}
-                                                <div className="second-page__teacher">
-                                                    <p>
-                                                        <input
-                                                            placeholder="Преподаватель"
-                                                            className={`input`}
-                                                            type={`text`}
-                                                            name={`teacher`}
-                                                            onBlur={handleBlur}
-                                                            onChange={handleChange}
-                                                            value={values.teacher}
-                                                        ></input>
-                                                    </p>
+                                    <input
+                                        placeholder="Телефон для связи"
+                                        className={`input`}
+                                        type={`text`}
+                                        name={`phone`}
+                                        onBlur={handleBlur}
+                                        onChange={handleChange}
+                                        value={values.phone}
+                                    />
 
-                                                    {touched.teacher && errors.teacher && (
-                                                        <p className={'error'}>{errors.teacher}</p>
-                                                    )}
 
-                                                    {/*  Комментарий */}
-                                                    <div className="second-page__comment">
-                                                        <p>
-                                                            <input
-                                                                placeholder="Комментарий"
-                                                                className={`input`}
-                                                                type={`text`}
-                                                                name={`comment`}
-                                                                onBlur={handleBlur}
-                                                                onChange={handleChange}
-                                                                value={values.comment}
-                                                            ></input>
-                                                        </p>
-
-                                                        {touched.comment && errors.comment && (
-                                                            <p className={'error'}>{errors.comment}</p>
-                                                        )}
-
-                                                        <button
-                                                            disabled={!isValid && !dirty}
-                                                            onClick={handleSubmit}
-                                                            type={`submit`}
-                                                        >
-                                                            Отправить{' '}
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {touched.phone && errors.phone && (
+                                        <p className={'error'}>{errors.phone}</p>
+                                    )}
                                 </div>
                             </div>
+                            <div className='row'>
+                            {/*  Форма исполнения */}
+                            <div className="second-page__formOfPerfomance">
+
+                                <input
+                                    placeholder="Форма исполнения"
+                                    className={`input`}
+                                    type={`text`}
+                                    name={`formOfPerfomance`}
+                                    onBlur={handleBlur}
+                                    onChange={handleChange}
+                                    value={values.formOfPerfomance}
+                                />
+
+                                {touched.formOfPerfomance &&
+                                errors.formOfPerfomance && (
+                                    <p className={'error'}>{errors.formOfPerfomance}</p>
+                                )}
+
+                            </div>
+
+                            {/*  ОВЗ */}
+                            <div className="second-page__ovz">
+                                <label>
+                                    <input
+                                        type={`checkbox`}
+                                        name={`ovz`}
+                                        value={values.ovz}
+                                        
+                                    /> ОВЗ
+
+                                </label>
+
+                            </div>
+                                </div>
+
+
+                            {/*  Преподаватель */}
+                            <div className="second-page__teacher">
+                                <textarea
+                                    rows = '3' placeholder=" Преподаватель
+                                Концертмейстер
+                                Представитель"
+
+
+
+                                    className={`height-input`}
+                                    type={`text`}
+                                    name={`teacher`}
+                                    onBlur={handleBlur}
+                                    onChange={handleChange}
+                                    value={values.teacher}
+                                />
+
+
+                                {touched.teacher && errors.teacher && (
+                                    <p className={'error'}>{errors.teacher}</p>
+                                )}
+
+                            </div>
+
+                            {/*  Комментарий */}
+                            <div className="second-page__comment">
+
+                                <input
+                                    placeholder="Комментарий"
+                                    className={`height-input`}
+                                    type={`text`}
+                                    name={`comment`}
+                                    onBlur={handleBlur}
+                                    onChange={handleChange}
+                                    value={values.comment}
+                                />
+
+
+                                {touched.comment && errors.comment && (
+                                    <p className={'error'}>{errors.comment}</p>
+                                )}
+                            </div>
                         </div>
+                        <div className= 'button-container'>
+                        <button className="second-page__button"
+                                disabled={!isValid && !dirty}
+                                onClick={handleSubmit}
+                                type={`submit`}
+                        >
+                            Отправить{' '}
+                        </button>
+                         </div>
+
+
                     </div>
                 )}
             </Formik>
