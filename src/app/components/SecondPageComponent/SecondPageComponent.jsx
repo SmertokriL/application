@@ -1,5 +1,4 @@
 import {Formik, Field} from 'formik'
-import '../../../App.css'
 import * as yup from 'yup'
 import React from 'react'
 
@@ -255,7 +254,7 @@ function SecondPageComponent() {
                                 )}
                             </div>
                         </div>
-                        <div className= 'button-container'>
+                        <div className= 'button-send-container'>
                         <button className="second-page__button"
                                 disabled={!isValid && !dirty}
                                 onClick={handleSubmit}

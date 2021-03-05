@@ -1,0 +1,39 @@
+.resultPage {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+
+
+}
+
+.list {
+    width:80%;
+}
+
+.name {
+
+}
+
+li {
+    margin-top: 15px;
+}
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.name {
+    flex-basis: 40%;
+}
+.score1 {
+    flex-basis: 15%;
+}
+.score2 {
+    flex-basis: 15%;
+}
+.score3 {
+    flex-basis: 15%;
+}
+.finalScore3 {
+    flex-basis: 15%;
+}
