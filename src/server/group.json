@@ -1,0 +1,57 @@
+{
+  "group_id": 4,
+  "group_name": "Тура А",
+  "season_name": "Конкурс 2020",
+  "results": [{
+    "data": [{
+      "id": 1,
+      "name": "Анжи Башаев",
+      "scores": [
+        10, 10, 10
+      ],
+      "final_score": 30,
+      "is_top": true
+    },
+      {
+        "id": 1,
+        "name": "Анжела Дэвис",
+        "scores": [
+          10, 8, 7
+        ],
+        "final_score": 25,
+        "is_top": false
+      },
+      {
+        "id": 4,
+        "name": "Анжела Макфарлейна",
+        "scores": [
+          8, 8, 7
+        ],
+        "final_score": 23,
+        "is_top": false
+      },
+      {
+        "id": 15,
+        "name": "Кирилл Бажнаев",
+        "scores": [
+          7, 7, 7
+        ],
+        "final_score": 21,
+        "is_top": false
+      },
+      {
+        "id": 32,
+        "name": "Бажурян Эдуард",
+        "scores": [
+          6, 7, 6
+        ],
+        "final_score": 19,
+        "is_top": false
+      }
+
+    ],
+    "page": 1,
+    "page_count": 2
+
+  }]
+}
