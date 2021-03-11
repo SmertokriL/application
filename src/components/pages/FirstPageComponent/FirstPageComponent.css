@@ -1,0 +1,54 @@
+.app-wrapper,
+.second-page {
+    height: 100vh;
+    margin: 0px auto;
+    max-width: 965px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+}
+
+.footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 50%;
+}
+
+.footer__button {
+    margin: 10px;
+    padding: 15px 109px;
+    background: #516baf;
+    color: #fff;
+}
+
+.header__button {
+    margin: 10px;
+    padding: 15px 90px;
+    background: #516baf;
+    color: #fff;
+}
+
+.footer-input-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.first {
+    margin-right: 30px;
+}
+
+.second {
+    margin-left: 30px;
+}
+
+hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.9);
+}
+

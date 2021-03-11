@@ -1,5 +1,4 @@
 import {Formik, Field} from 'formik'
-import '../../../App.css'
 import * as yup from 'yup'
 import React from 'react'
 

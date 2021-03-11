@@ -1,6 +1,7 @@
-import FirstPageComponent from './components/pages/FirstPageComponent/FirstPageComponent'
-import SecondPageComponent from './components/pages/SecondPageComponent/SecondPageComponent'
-import ThemeButton from "./components/ThemeButtonComponent/ThemeButton";
+import FirstPageComponent from './pages/FirstPageComponent/FirstPageComponent'
+import SecondPageComponent from './pages/SecondPageComponent/SecondPageComponent'
+import ThemeButton from "./ThemeButtonComponent/ThemeButton";
+import CompetitionResults from "./pages/CompetitionResults/CompetitionResults"
 import React from 'react'
 import {
   BrowserRouter as Router,
@@ -18,6 +19,7 @@ function App() {
         <ThemeButton/>
         <Route path="/" exact component={FirstPageComponent} />
         <Route path="/request" exact component={SecondPageComponent}  />
+        <Route path="/competitionResults" exact component={CompetitionResults}  />
       </div>
     </Router>
   )
