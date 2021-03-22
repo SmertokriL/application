@@ -1,0 +1,17 @@
+.footer-input-container {
+    display: flex;
+    width:  80%;
+    justify-content: space-around;
+}
+
+select {
+    line-height: 1.5em;
+    border-radius: 4px;
+    border: solid 1px black;
+    padding: 4px 6px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 35%;
+
+}
+

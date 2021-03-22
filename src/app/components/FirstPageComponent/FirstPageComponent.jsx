@@ -1,7 +1,7 @@
 import React from 'react'
-import '../../../App.css'
+import './FirstPageComponent.css'
 import ContestResultsForm from './ContestResultsForm'
-import CompetitionRegistrationBlock from './CompetitionRegistrationBlock'
+import CompetitionRegistrationBlock from '../CompetitionRegistrationBlock/CompetitionRegistrationBlock'
 
 function FirstPageComponent() {
   return (
